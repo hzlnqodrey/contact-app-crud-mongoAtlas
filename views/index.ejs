@@ -1,0 +1,28 @@
+<p class="mt-4">Detail Page: </p>
+    <ul>
+        <li>Document ID: <%= ID_Document %> </li>
+        <li>Published Date: <%= Published_Date %> </li>
+    </ul>
+    <h1>Selamat Datang di Laman Data Identitas</h1>
+    <table class="table">
+        <tr>
+            <th>Nama</th>
+            <th>Umur</th>
+            <th>KTP</th>
+            <th>Kota</th>
+            <th>Provinsi</th>
+        </tr>
+        <% if (Identitas.length === 0) { %>
+            <p>Data Identitas masih kosong</p>
+        <% } else { %>
+            <% Identitas.forEach(Identitas => { %>
+                <tr>
+                    <td><%= Identitas.Nama %> </td>
+                    <td><%= Identitas.Umur %> </td>
+                    <td><%= Identitas.KTP %> </td>
+                    <td><%= Identitas.Kota %> </td>
+                    <td><%= Identitas.Provinsi %> </td>
+                </tr>
+            <% }) %>
+        <% } %> 
+
